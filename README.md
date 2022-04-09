@@ -49,18 +49,17 @@ Decide a name for the image and run the following command. Don't miss the dot!
 ```
 docker build -t <the name of your image> .
 ```
-
-**You should ensure your dockerized application works correctly (i.e. accessible on localhost if you run the container on your machine) before continuing.  **
+__You should ensure your dockerized application works correctly (i.e. accessible on localhost if you run the container on your machine) before continuing.__
 ```
 docker run --publish <your machine host number>:<application exposed host number> -t <the name of your image>
 ```
-**The application should be able to be visited at localhost:your machine host number **
+__The application should be able to be visited at localhost:your machine host number__
 
 
 ## Step 4: Get your IBM Cloud API key
 Log into your IBM Cloud account and follow this tutorial: https://www.ibm.com/docs/en/app-connect/containers_cd?topic=servers-creating-cloud-api-key to generate your API Key. Store it in a safe place and we shall need it later.
 ## Step 5: Create a resource group on your IBM Cloud account.
-To start managing your resource groups, in the IBM Cloud® console, go to Manage > Account > Account resources > Resource groups. You can create, view, and rename your resource groups, add resources and manage access to your resource groups.
+To start managing your resource groups, in the IBM Cloud® console, go to Manage > Account > Account resources > Resource groups. You can create, view, and rename your resource groups, add resources and manage access to your resource groups. Make a note of the name of your resource group as we shall need it later.
 ![image](https://user-images.githubusercontent.com/55789171/162568009-4056d8b1-ed08-4a25-a18f-b06e8fa46451.png)
 ## Step 6: Create a cluster for Kubernetes.
 Click on the upper left button in your cloud console, then click on Kubernetes, then click on clusters, then click on create new cluster.   
@@ -72,7 +71,7 @@ It can take sometime for the cluster to be created, so go take a rest at this mo
 Click on the upper left button in your cloud console, then click on Kubernetes, then click on Registry.
 ![2022-04-09 (2)](https://user-images.githubusercontent.com/55789171/162568174-602bdaa2-f094-4f8a-a79e-358c7ea241e3.png)
 You should be presented with the following page.   
-Click on the Namespaces and create your own name space.   
+Click on the Namespaces and create your own namespace.   
 Make a note of the namespace name as it shall be needed later.
 ![1649500915(1)](https://user-images.githubusercontent.com/55789171/162568498-68543c37-20b5-4f43-af28-5f3bc60e82b7.png)
 ## Step 8: Tag your image you created in step 3
