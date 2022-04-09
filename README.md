@@ -148,7 +148,7 @@ kubectl apply -f deployment.yaml
 ```
 ## Step 14: See it!
 Congratulations! You have succesfully deployed your application.
-Now go to your cluster, click on Workder nodes, and copy that public IP address.   
+Now go to your cluster, click on Worker nodes, and copy that public IP address.   
 ![1649503795(1)](https://user-images.githubusercontent.com/55789171/162570845-7f3704d3-ceec-4780-9ff2-83319ef733dc.png)
 Go and visit the following address. Your application is there waiting for you!
 If you have not changed the node port value in the deployment.yaml, then it is 31514.   
