@@ -56,7 +56,7 @@ docker run --publish <your machine host number>:<application exposed host number
 __The application should be able to be visited at localhost:your machine host number__
 
 
-## Step 4: Get your IBM Cloud API key
+## Step 4: Get your IBM Cloud API key 
 Log into your IBM Cloud account and follow this tutorial: https://www.ibm.com/docs/en/app-connect/containers_cd?topic=servers-creating-cloud-api-key to generate your API Key. Store it in a safe place and we shall need it later.
 ## Step 5: Create a resource group on your IBM Cloud account.
 To start managing your resource groups, in the IBM Cloud® console, go to Manage > Account > Account resources > Resource groups. You can create, view, and rename your resource groups, add resources and manage access to your resource groups. Make a note of the name of your resource group as we shall need it later.
@@ -80,12 +80,17 @@ Replace the "a name of your repository" with the name you like, for your reposit
 ```
 docker tag <the name of your image> uk.icr.io/<the name of your namespace>/<a name of your repository>
 ```
-## Step 9: Log into your IBM Cloud account in your terminal
+## Step 9: Log into your IBM Cloud account in your terminal and install relevant plugins
 Run the following commands. Replace api key and resource group name with your own.
 ```
 ibmcloud login --apikey "<your api key>" -r "eu-gb" -g <your resource group name>
 ibmcloud cr region-set "eu-gb"
 ibmcloud cr login
+```
+Run the following commands to install plugins.
+```
+ibmcloud plugin install -f kubernetes-service
+ibmcloud plugin install -f container-registry
 ```
 ## Step 10: Push your image to the IBM Cloud Registry.
 Run the following command. Replace namespace name and repository name with your own values.
